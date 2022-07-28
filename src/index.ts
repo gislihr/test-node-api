@@ -28,7 +28,7 @@ async function startServer() {
 
   server
     .listen({
-      port: port,
+      port,
     })
     .then(({ url }) => {
       console.log(`server running on ${url}`);
