@@ -8,7 +8,7 @@
     "dev": "nodemon",
     "postinstall": "tsc",
     "start": "node build/index.js",
-    "deploy": "git add . && git commit -m Heroku && git push heroku master"
+    "deploy": "git add . && git commit -m Heroku && git push heroku main"
   },
   "keywords": [],
   "author": "",
