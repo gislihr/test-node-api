@@ -18,6 +18,7 @@ async function startServer() {
   const server = new ApolloServer({
     schema,
     plugins: [ApolloServerPluginLandingPageLocalDefault({ embed: true })],
+    introspection: true,
     context: (): ContextWithDataSources => {
       return {
         playerDatasource: new PlayerDatasource(),
