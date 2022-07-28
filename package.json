@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "node": "16.16.0",
   "scripts": {
     "dev": "nodemon",
-    "build": "tsc",
+    "postinstall": "tsc",
     "start": "node build/index.js"
   },
   "keywords": [],
