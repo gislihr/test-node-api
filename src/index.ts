@@ -10,6 +10,7 @@ import {
 } from "./datasources/context";
 
 async function startServer() {
+  const port = process.env.PORT || 4000;
   const schema = await buildSchema({
     resolvers: [PlayerResolver],
   });
@@ -24,9 +25,13 @@ async function startServer() {
     },
   });
 
-  server.listen().then(({ url }) => {
-    console.log(`server running on ${url}`);
-  });
+  server
+    .listen({
+      port: port,
+    })
+    .then(({ url }) => {
+      console.log(`server running on ${url}`);
+    });
 }
 
 startServer().catch((e) => {
